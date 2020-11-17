@@ -8,11 +8,17 @@ public class KeywordFinderRunnable implements Runnable {
     String filename;
     int amountOfPretendWork;
 
-    public KeywordFinderRunnable(int[] array, int index, String filename) {
+    /**public KeywordFinderRunnable(int[] array, int index, String filename) {
         this.array = array;
         this.index = index;
         this.filename = filename;
         this.amountOfPretendWork = 1;
+    }**/
+    public KeywordFinderRunnable(int[] array, int index, String filename, int amountOfPretendWork) {
+        this.array = array;
+        this.index = index;
+        this.filename = filename;
+        this.amountOfPretendWork = amountOfPretendWork;
     }
 
     public void run() {

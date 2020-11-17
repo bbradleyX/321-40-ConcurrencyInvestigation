@@ -2,6 +2,12 @@ package edu.ithaca.dragon.concurrency.filework;
 
 import java.util.ArrayList;
 
-public interface FileUtil {
+/**public interface FileUtil {
     int[] calcStringOccurrences(ArrayList<String> filenames, String stringToFind);
+}**/
+
+public interface FileUtil {
+    int[] calcStringOccurrences(ArrayList<String> filenames, String stringToFind, int workLoad);
 }
+
+
