@@ -9,8 +9,8 @@ public class FileUtilTest {
 
     @Test
     public void calcStringOccurrencesTimingTest() {
-        // ---------------------------Tests 1-4------------------------------------------------------------------------------
         // final int dataSize = 10;
+        // ---------------------------Tests 1-4------------------------------------------------------------------------------
         System.out.println("----Experiment Modifying Size of Data----");
         System.out.println("Test 1: Data Size 1");
         int dataSize = 1;
@@ -30,7 +30,7 @@ public class FileUtilTest {
         calcStringOccurrencesTimingTest(new SequentialFileUtil(), dataSize, workload);
         calcStringOccurrencesTimingTest(new ThreadedFileUtil(), dataSize, workload);
 
-        // ---------------------------Tests 5-10------------------------------------------------------------------------------
+        // ---------------------------Tests 5-12------------------------------------------------------------------------------
         System.out.println("\n----Experiment Modifying IO Workload----\n #comment out CPU when compiling");
         System.out.println("Test 5: Workload 1");
         dataSize = 10;
@@ -55,22 +55,54 @@ public class FileUtilTest {
 
         System.out.println("\n----Experiment Modifying IO Workload & Size of Data----\n #comment out CPU when compiling");
         System.out.println("Test 9: Workload 1");
+        dataSize = 10;
+        workload = 1;
+        calcStringOccurrencesTimingTest(new SequentialFileUtil(), dataSize, workload);
+        calcStringOccurrencesTimingTest(new ThreadedFileUtil(), dataSize, workload);
         System.out.println("\nTest 10: Workload 0");
+        dataSize = 10;
+        workload = 0;
+        calcStringOccurrencesTimingTest(new SequentialFileUtil(), dataSize, workload);
+        calcStringOccurrencesTimingTest(new ThreadedFileUtil(), dataSize, workload);
         System.out.println("\nTest 11: Workload 10");
+        dataSize = 10;
+        workload = 10;
+        calcStringOccurrencesTimingTest(new SequentialFileUtil(), dataSize, workload);
+        calcStringOccurrencesTimingTest(new ThreadedFileUtil(), dataSize, workload);
         System.out.println("\nTest 12: Workload 30");
+        dataSize = 10;
+        workload = 30;
+        calcStringOccurrencesTimingTest(new SequentialFileUtil(), dataSize, workload);
+        calcStringOccurrencesTimingTest(new ThreadedFileUtil(), dataSize, workload);
 
-        // ---------------------------Tests 13-16------------------------------------------------------------------------------
+        // ---------------------------Tests 13-20------------------------------------------------------------------------------
         System.out.println("\n----Experiment Modifying CPU Workload----\n #comment out IO when compiling");
         System.out.println("Test 13: Workload 1");
+        dataSize = 10;
+        workload = 1;
+        calcStringOccurrencesTimingTest(new SequentialFileUtil(), dataSize, workload);
+        calcStringOccurrencesTimingTest(new ThreadedFileUtil(), dataSize, workload);
         System.out.println("\nTest 14: Workload 0");
+        dataSize = 10;
+        workload = 1;
+        calcStringOccurrencesTimingTest(new SequentialFileUtil(), dataSize, workload);
+        calcStringOccurrencesTimingTest(new ThreadedFileUtil(), dataSize, workload);
         System.out.println("\nTest 15: Workload 10");
+        dataSize = 10;
+        workload = 1;
+        calcStringOccurrencesTimingTest(new SequentialFileUtil(), dataSize, workload);
+        calcStringOccurrencesTimingTest(new ThreadedFileUtil(), dataSize, workload);
         System.out.println("\nTest 16: Workload 30");
+        dataSize = 10;
+        workload = 1;
+        calcStringOccurrencesTimingTest(new SequentialFileUtil(), dataSize, workload);
+        calcStringOccurrencesTimingTest(new ThreadedFileUtil(), dataSize, workload);
 
         System.out.println("\n----Experiment Modifying Size of Data & CPU Workload----\n #comment out IO when compiling");
-        System.out.println("Test 13: Workload 1");
-        System.out.println("\nTest 14: Workload 0");
-        System.out.println("\nTest 15: Workload 10");
-        System.out.println("\nTest 16: Workload 30");
+        System.out.println("Test 17: Workload 1");
+        System.out.println("\nTest 18: Workload 0");
+        System.out.println("\nTest 19: Workload 10");
+        System.out.println("\nTest 20: Workload 30");
 
         // ---------------------------Tests 21-24------------------------------------------------------------------------------
         System.out.println("\n----Experiment Modifying Size of Data & Both Workloads----");
