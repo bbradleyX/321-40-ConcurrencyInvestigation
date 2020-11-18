@@ -77,12 +77,6 @@ public class FileUtilTest {
         calcStringOccurrencesTimingTest(new SequentialFileUtil(), dataSize, workload);
         calcStringOccurrencesTimingTest(new ThreadedFileUtil(), dataSize, workload);
 
-        System.out.println("\n----Experiment Modifying Size of Data & CPU Workload----\n #comment out IO when compiling");
-        System.out.println("Test 17: Workload 1");
-        System.out.println("\nTest 18: Workload 0");
-        System.out.println("\nTest 19: Workload 10");
-        System.out.println("\nTest 20: Workload 30");
-
         // ---------------------------Tests 21-24------------------------------------------------------------------------------
         System.out.println("\n----Experiment Modifying Size of Data & Both Workloads----");
         System.out.println("Test 21a: Data Size 10 Workload 1");
